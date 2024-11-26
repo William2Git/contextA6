@@ -1,17 +1,9 @@
-import './App.css'
-import Header from "./views/Header.jsx";
-import Hero from "./views/Hero.jsx";
-import Feature from "./views/Feature.jsx";
-import Footer from "./views/Footer.jsx";
+import './App.css';
+import HomeView from "./views/HomeView.jsx";
 
 function App() {
   return (
-    <div style={{overflowX:"hidden"}}>
-      <Header/>
-      <Hero/>
-      <Feature/>
-      <Footer/>
-    </div>
+    <HomeView/>
   )
 }
 
