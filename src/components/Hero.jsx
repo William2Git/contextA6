@@ -1,7 +1,10 @@
 import "./Hero.css";
 import HeroImage from "./hero.png";
+import { useNavigate} from "react-router";
 
 function Hero() {
+    let navigate = useNavigate();
+
     return (
         <div className="hero">
             <img src={HeroImage} width={"100%"} height={"700px"}></img>
@@ -13,7 +16,7 @@ function Hero() {
                     your membership</p>
                 <div>
                     <input id="bar" type="text" placeholder="Email Address"></input>
-                    <button id="started">Get Started </button>
+                    <button id="started" onClick ={() => navigate("/register")}>Get Started </button>
                 </div>
             </div>
         </div>

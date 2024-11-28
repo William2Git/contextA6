@@ -1,12 +1,15 @@
 import "./Header.css";
+import { useNavigate } from "react-router";
 
 function Header() {
+    let navigate = useNavigate();
+
     return (
         <div className ="navbar">
             {/* nav bar */}
-            <h1 style={{cursor:'pointer'}}>WStream4U</h1>
+            <h1 style={{cursor:'pointer'}} onClick ={() => navigate("/")}>WStream4U</h1>
             <div className="left">
-                <button>Home</button>
+                <button onClick={() => navigate("/")}>Home</button>
                 <button>About</button>
                 <button>TV Shows</button>
                 <button>Movies</button>
@@ -15,8 +18,9 @@ function Header() {
             </div>
 
             <div>
-                <button>Login</button>
-                <button>Signup</button>
+                <button onClick={() => navigate("/login")}>Login</button>
+                <button onClick ={() => navigate("/register")}>Signup</button>
+                
             </div>
 
         </div>

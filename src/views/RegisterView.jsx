@@ -1,8 +1,13 @@
 import "./RegisterView.css";
+import Header from "../components/Header.jsx";
 
 function RegisterView(){
     return(
-        <h1>bonjour</h1>
+        <div>
+            <Header/>
+            <h1>Register</h1>
+        </div>
+        
     );
 }
 
