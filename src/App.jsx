@@ -3,6 +3,9 @@ import './App.css';
 import HomeView from "./views/HomeView.jsx";
 import RegisterView from "./views/RegisterView.jsx";
 import LoginView from "./views/LoginView.jsx";
+import MoviesView from "./views/MoviesView.jsx";
+import GenreView from "./views/GenreView.jsx";
+import DetailView from "./views/DetailView.jsx";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <Route path="/" element={<HomeView />} />
         <Route path="/register" element={<RegisterView/>}/>
         <Route path="/login" element={<LoginView/>}/>
+        <Route path="/movies" element={<MoviesView/>}/>
+        <Route path="/movies/genre/genre_id" element={<GenreView/>}/>
+        <Route path="/movies/details/id" element={<DetailView/>}/>
       </Routes>
     </BrowserRouter>
 
