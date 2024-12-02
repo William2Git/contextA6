@@ -32,19 +32,16 @@ function Feature() {
           {posters.length > 0 ? (
             <div>
               <img height ={"500px"}
-                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 4))].poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5))].poster_path}`}
               />
               <img height ={"500px"}
-                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 4 + 4))].poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 5))].poster_path}`}
               />
               <img height ={"500px"}
-                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 4 + 8))].poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 10))].poster_path}`}
               />
               <img height ={"500px"}
-                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 4 + 12))].poster_path}`}
-              />
-              <img height ={"500px"}
-                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 4 + 16))].poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 15))].poster_path}`}
               />
             </div>
           ) : (

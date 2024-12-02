@@ -5,7 +5,7 @@ import Genres from "../components/Genres.jsx";
 function MoviesView() {
     const navigate = useNavigate();
 
-    const genresList = [
+    const genres = [
         { id: 28, genre: 'Action' },
         { id: 12, genre: 'Adventure' },
         { id: 16, genre: 'Animation' },
@@ -37,7 +37,7 @@ function MoviesView() {
                 </div>
 
             </div>
-            <Genres gen ={genresList}/>
+            <Genres genresList ={genres}/>
             <Outlet/>
             {/* <Footer/> */}
         </div>
