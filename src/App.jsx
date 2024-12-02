@@ -12,11 +12,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeView />} />
-        <Route path="/register" element={<RegisterView/>}/>
-        <Route path="/login" element={<LoginView/>}/>
-        <Route path="/movies" element={<MoviesView/>}/>
-        <Route path="/movies/genre/genre_id" element={<GenreView/>}/>
-        <Route path="/movies/details/id" element={<DetailView/>}/>
+        <Route path="/register" element={<RegisterView />} />
+        <Route path="/login" element={<LoginView />} />
+        <Route path="/movies" element={<MoviesView />}>
+          <Route path="genre/genre_id" element={<GenreView />} />
+          <Route path="details/id" element={<DetailView />} />
+        </Route>
       </Routes>
     </BrowserRouter>
 

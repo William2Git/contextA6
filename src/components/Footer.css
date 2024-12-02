@@ -14,13 +14,13 @@
     justify-content: space-between;
 }
 
-p3 {
+#top-text p {
     font-size: 20px;
     cursor: pointer;
     transition-duration: 0.5s;
     padding-bottom: 15px;
 }
 
-p3:hover {
+#top-text p:hover {
     color: white;
 }

@@ -1,10 +1,23 @@
 import "./MoviesView.css";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import {useNavigate} from "react-router";
+import {Outlet, useNavigate} from "react-router";
+import Genres from "../components/Genres.jsx";
 
 function MoviesView() {
     const navigate = useNavigate();
+
+    const genresList = [
+        { id: 28, genre: 'Action' },
+        { id: 12, genre: 'Adventure' },
+        { id: 16, genre: 'Animation' },
+        { id: 35, genre: 'Comedy' },
+        { id: 80, genre: 'Crime' },
+        { id: 99, genre: 'Documentary' },
+        { id: 18, genre: 'Drama' },
+        { id: 878, genre: 'Science Fiction' },
+        { id: 14, genre: 'Fantasy' },
+        { id: 27, genre: 'Horror' },
+      ];
+
     return (
         <div>
             <div className="navbar">
@@ -24,8 +37,8 @@ function MoviesView() {
                 </div>
 
             </div>
-            <h1>Welcome!</h1>
-
+            <Genres gen ={genresList}/>
+            <Outlet/>
             {/* <Footer/> */}
         </div>
 

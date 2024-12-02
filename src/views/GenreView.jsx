@@ -2,7 +2,9 @@ import "./GenreView.css";
 
 function GenreView(){
     return(
-        <div></div>
+        <div>
+            <h1>Genre view exists</h1>
+        </div>
     )
 }
 

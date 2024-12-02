@@ -2,7 +2,7 @@ import "./DetailView.css";
 
 function DetailView(){
     return(
-        <div></div>
+        <h1>Detail View</h1>
     )
 }
 

@@ -4,15 +4,15 @@ function Footer() {
     return (
         <div className="footer" width="100%" height="400px" background-color="blue">
             <div id="top-text">
-                <p3>Help Center</p3>
-                <p3>Terms of Use</p3>
-                <p3>Privacy Policy</p3>
-                <p3>Ad Choices</p3>
-                <p3>Cookie Preferences</p3>
-                <p3>Ways to Watch</p3>
-                <p3>FAQ</p3>
-                <p3>About Us</p3>
-                <p3>Contact Us</p3>
+                <p>Help Center</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Ad Choices</p>
+                <p>Cookie Preferences</p>
+                <p>Ways to Watch</p>
+                <p>FAQ</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
             </div>
             <p style={{textAlign:"center"}}>Copyright © 2024 WStream4U. All rights reserved.</p>
             <h1>WStream4U</h1>
