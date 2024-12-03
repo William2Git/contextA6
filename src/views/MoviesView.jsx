@@ -1,6 +1,7 @@
 import "./MoviesView.css";
-import {Outlet, useNavigate} from "react-router";
+import { Outlet, useNavigate } from "react-router";
 import Genres from "../components/Genres.jsx";
+import Footer from "../components/Footer.jsx";
 
 function MoviesView() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ function MoviesView() {
         { id: 878, genre: 'Science Fiction' },
         { id: 14, genre: 'Fantasy' },
         { id: 27, genre: 'Horror' },
-      ];
+    ];
 
     return (
         <div>
@@ -37,9 +38,12 @@ function MoviesView() {
                 </div>
 
             </div>
-            <Genres genresList ={genres}/>
-            <Outlet/>
-            {/* <Footer/> */}
+            <Genres genresList={genres} />
+            <Outlet />
+            <br></br>
+            <br></br>
+            <br></br>
+            <Footer />
         </div>
 
     )
