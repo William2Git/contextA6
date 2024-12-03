@@ -38,8 +38,11 @@ function MoviesView() {
                 </div>
 
             </div>
-            <Genres genresList={genres} />
-            <Outlet />
+
+            <div className="middle">
+                <Genres genresList={genres} />
+                <Outlet />
+            </div>
             <br></br>
             <br></br>
             <br></br>
