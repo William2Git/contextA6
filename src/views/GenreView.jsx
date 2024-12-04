@@ -51,7 +51,7 @@ function GenreView() {
                 <button className="page-button" style={{ curosr: "pointer" }} onClick={() => previousPage()}>Previous Page</button>
                 <button className="page-button" style={{ cursor: "pointer" }} onClick={() => nextPage()} >Next Page</button>
             </div>
-
+            <p id="page-count">Page: {page}/{maxPage}</p>
         </div>
     )
 }

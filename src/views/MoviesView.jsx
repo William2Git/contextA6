@@ -5,18 +5,17 @@ import Footer from "../components/Footer.jsx";
 
 function MoviesView() {
     const navigate = useNavigate();
-
     const genres = [
         { id: 28, genre: 'Action' },
         { id: 12, genre: 'Adventure' },
         { id: 16, genre: 'Animation' },
         { id: 35, genre: 'Comedy' },
         { id: 80, genre: 'Crime' },
-        { id: 99, genre: 'Documentary' },
-        { id: 18, genre: 'Drama' },
-        { id: 878, genre: 'Science Fiction' },
+        { id: 10751, genre: 'Family' },
         { id: 14, genre: 'Fantasy' },
         { id: 27, genre: 'Horror' },
+        { id: 10402, genre: 'Music' },
+        { id: 878, genre: 'Science Fiction' },
     ];
 
     return (
@@ -49,7 +48,6 @@ function MoviesView() {
             <br></br>
             <Footer />
         </div>
-
     )
 }
 

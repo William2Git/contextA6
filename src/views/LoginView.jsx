@@ -12,7 +12,7 @@ function LoginView() {
 
     function login() {
         if (pass == "iloveyou") {
-            return navigate("/movies");
+            return navigate("/movies/genre/28");
         }
         return alert("Incorrect password, please try again");
     }
