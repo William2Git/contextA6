@@ -15,6 +15,7 @@ function DetailView() {
             );
             setMovDetails(response.data);
             setProduction(response.data.production_companies);
+            console.log(response.data);
         })()
     }, []);
 
@@ -27,6 +28,32 @@ function DetailView() {
             }
         }
         return companies;
+    }
+    
+    function getOnlyTrailers(videos){
+        let trailers = videos.filter(vid => vid.type=="Trailer");
+        if(trailers.length<=0){
+            return(
+                <p>No Trailers Available</p>
+            )
+        }
+
+        return trailers.map((trailer) => (
+            <div key={trailer.id} className="trailer-tile">
+                <a
+                    href={`https://www.youtube.com/watch?v=${trailer.key}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        className="trailer-thumbnail"
+                        src={`https://img.youtube.com/vi/${trailer.key}/0.jpg`}
+                        alt={trailer.name}
+                    />
+                    <h3>{trailer.name}</h3>
+                </a>
+            </div>
+        ));
     }
 
     return (
@@ -42,23 +69,12 @@ function DetailView() {
 
             <div className="trailers-section">
                 <h2>Trailers</h2>
-                <div className="trailers-grid">
-                    {movDetails.videos && movDetails.videos.results.map((trailer) => (
-                        <div key={trailer.id} className="trailer-tile">
-                            <a
-                                href={`https://www.youtube.com/watch?v=${trailer.key}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    className="trailer-thumbnail"
-                                    src={`https://img.youtube.com/vi/${trailer.key}/0.jpg`}
-                                    alt={trailer.name}
-                                />
-                                <h3>{trailer.name}</h3>
-                            </a>
-                        </div>
-                    ))}
+                <div className ="trailers-grid">
+                    {movDetails.videos && movDetails.videos.results.length>0 ?(
+                        getOnlyTrailers(movDetails.videos.results)
+                    ):(
+                        <p>No Trailers Available</p>
+                    )}
                 </div>
             </div>
         </div>
