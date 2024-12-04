@@ -1,4 +1,3 @@
-
 h {
     width:400px;
     font-size: 2.5rem;
@@ -9,14 +8,13 @@ h {
 }
 
 /* Movie Details Section */
-p {
+#detail {
     font-size: 1rem;
     margin-bottom: 8px;
     color: #b3b3b3;
 }
 
-/* Movie Poster Image */
-img {
+#poster {
     width: 100%;
     max-width: 300px;
     border-radius: 5px;
@@ -24,31 +22,32 @@ img {
 }
 
 /* Release Date */
-p:nth-of-type(1) {
+#detail:nth-of-type(1) {
     font-weight: bold;
     color: #fff;
 }
 
 /* Runtime (Red Color for emphasis) */
-p:nth-of-type(2) {
+#detail:nth-of-type(2) {
     color: #e50914; /* Netflix red */
 }
 
 /* Language */
-p:nth-of-type(3) {
+#detail:nth-of-type(3) {
     color: #b3b3b3;
 }
 
 /* Production Companies */
-p:nth-of-type(4) {
+#detail:nth-of-type(4) {
     font-style: italic;
     color: #999;
 }
 
 /* Description */
-p:nth-of-type(5) {
+#detail:nth-of-type(5) {
     font-size: 1.1rem;
     color: #fff;
+    width:1000px;
 }
 
 /* Trailers Section */
@@ -66,8 +65,8 @@ p:nth-of-type(5) {
 /* Trailers Grid Layout (Make icons larger, fewer per row) */
 .trailers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger icons, fewer per row */
-    gap: 30px; /* Increased gap between items */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 30px; 
 }
 
 /* Individual Trailer Tile */

@@ -1,24 +1,17 @@
 import "./Genres.css";
-import { useState } from "react";
 import { useNavigate } from "react-router";
 
 function Genres(props) {
   const navigate = useNavigate();
-  const [id, setId] = useState(null);
-
-  function DisplayMovies(genre) {
-    setId(genre.id);
-    navigate(`genre/${genre.id}`);
-  }
 
   return (
     <div>
-      <h1 id="list-title">Genres</h1>
+      <h2 id="list-title">Genres</h2>
       <ul>
         {
           props.genresList.map((gen) => {
             return (
-              <li id="categories" key={gen.id} onClick={() => DisplayMovies(gen)} style={{ cursor: 'pointer' }}>{gen.genre}</li>
+              <li id="categories" key={gen.id} onClick={() => navigate(`genre/${gen.id}`)} style={{ cursor: 'pointer' }}>{gen.genre}</li>
             )
           })
         }

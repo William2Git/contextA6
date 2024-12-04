@@ -7,9 +7,6 @@ function DetailView() {
     const [movDetails, setMovDetails] = useState([]);
     const [production, setProduction] = useState([]);
     const params = useParams();
-    useEffect(() => {
-        console.log(params.id);
-    }, []);
 
     useEffect(() => {
         (async function getGenre() {
@@ -18,7 +15,6 @@ function DetailView() {
             );
             setMovDetails(response.data);
             setProduction(response.data.production_companies);
-            console.log(response.data);
         })()
     }, []);
 
@@ -36,13 +32,13 @@ function DetailView() {
     return (
         <div>
             <h>{movDetails.original_title}</h>
-            <p>Release Date: {movDetails.release_date}</p>
-            <p>Runtime: {movDetails.runtime} mins</p>
-            <p>Language: {movDetails.original_language}</p>
-            <p>Production Companies: {getCompanies()}</p>
-            <p>Description: {movDetails.overview} mins</p>
+            <p id="detail">Release Date: {movDetails.release_date}</p>
+            <p id="detail">Runtime: {movDetails.runtime} mins</p>
+            <p id="detail">Language: {movDetails.original_language}</p>
+            <p id="detail">Production Companies: {getCompanies()}</p>
+            <p id="detail">Description: {movDetails.overview}</p>
 
-            <img src={`https://image.tmdb.org/t/p/w500${movDetails.poster_path}`} />
+            <img id= "poster" src={`https://image.tmdb.org/t/p/w500${movDetails.poster_path}`} />
 
             <div className="trailers-section">
                 <h2>Trailers</h2>

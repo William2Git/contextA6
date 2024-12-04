@@ -1,6 +1,6 @@
 import "./GenreView.css";
 import axios from "axios";
-import { useParams, useNavigate} from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
 function GenreView() {
@@ -20,33 +20,38 @@ function GenreView() {
         })()
     }, [params.id, page]);
 
-    function previousPage(){
-        if(page>1){
+    function previousPage() {
+        if (page > 1) {
             page--;
             setPage(page);
         }
     }
 
-    function nextPage(){
-        if(page<maxPage){
+    function nextPage() {
+        if (page < maxPage) {
             page++;
             setPage(page);
         }
     }
 
     return (
-        <div>
+        <div className="poster-section">
             {posters.length > 0 ? (
-                posters.map((mov)=>(
-                    <img key={mov.id} height={"400px"} style={{cursor:"pointer"}} onClick={()=> navigate(`/movies/details/${mov.id}`)}
-                    src= {`https://image.tmdb.org/t/p/w500${mov.poster_path}`}/>
+                posters.map((mov) => (
+                    <img className="poster-image" key={mov.id} height={"300px"} style={{ cursor: "pointer" }}
+                        onClick={() => navigate(`/movies/details/${mov.id}`)}
+                        src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`}
+                        alt={mov.title} />
                 ))
-                
+
             ) : (
                 <p>Loading content</p>
             )}
-            <button style={{cursor:"pointer"}} onClick ={() => nextPage()} >Next Page</button>
-            <button style={{curosr:"pointer"}} onClick ={() => previousPage()}>Previous Page</button>
+            <div className="button-container">
+                <button className="page-button" style={{ curosr: "pointer" }} onClick={() => previousPage()}>Previous Page</button>
+                <button className="page-button" style={{ cursor: "pointer" }} onClick={() => nextPage()} >Next Page</button>
+            </div>
+
         </div>
     )
 }
