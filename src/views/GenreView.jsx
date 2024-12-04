@@ -10,6 +10,7 @@ function GenreView() {
     const params = useParams();
     const navigate = useNavigate();
 
+    //this use effect provides new pages of posters for the SAME genre
     useEffect(() => {
         (async function getGenre() {
             const response = await axios.get(
@@ -18,7 +19,19 @@ function GenreView() {
             setPosters(response.data.results);
             setMaxPage(response.data.total_pages);
         })()
-    }, [params.id, page]);
+    }, [page]);
+
+    //this use effect RESETS the page count to 1 and provides posters for a NEW genre
+    useEffect(() => {
+        setPage(1);
+        (async function getGenre() {
+            const response = await axios.get(
+                `https://api.themoviedb.org/3/discover/movie?api_key=${import.meta.env.VITE_TMDB_KEY}&with_genres=${params.id}&page=${page}`
+            );
+            setPosters(response.data.results);
+            setMaxPage(response.data.total_pages);
+        })()
+    }, [params.id]);
 
     function previousPage() {
         if (page > 1) {

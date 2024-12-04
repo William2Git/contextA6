@@ -14,10 +14,12 @@ function Hero() {
                 <p style={{fontSize:"30px", paddingBottom:"30px"}}>Stream wherever, whenever and however you want</p>
                 <p style={{fontSize:"20px", paddingBottom:"20px"}}>Jump into the action now. Enter your email to create or renew
                     your membership</p>
+
                 <div>
                     <input id="bar" type="text" placeholder="Email Address"></input>
                     <button id="started" onClick ={() => navigate("/register")}>Get Started </button>
                 </div>
+                
             </div>
         </div>
     );

@@ -11,15 +11,14 @@ function Genres(props) {
         {
           props.genresList.map((gen) => {
             return (
-              <li id="categories" key={gen.id} onClick={() => navigate(`genre/${gen.id}`)} 
-              style={{ cursor: 'pointer' }}>{gen.genre}</li>
+              <li id="categories" key={gen.id} onClick={() => navigate(`genre/${gen.id}`)}
+                style={{ cursor: 'pointer' }}>{gen.genre}</li>
             )
           })
         }
       </ul>
     </div>
   );
-
 }
 
 export default Genres;

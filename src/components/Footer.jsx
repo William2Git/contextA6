@@ -14,7 +14,7 @@ function Footer() {
                 <p>About Us</p>
                 <p>Contact Us</p>
             </div>
-            <p style={{textAlign:"center"}}>Copyright © 2024 WStream4U. All rights reserved.</p>
+            <p style={{ textAlign: "center" }}>Copyright © 2024 WStream4U. All rights reserved.</p>
             <h1>WStream4U</h1>
         </div>
     );

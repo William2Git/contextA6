@@ -11,10 +11,13 @@ function LoginView() {
     const navigate = useNavigate();
 
     function login() {
-        if (pass == "iloveyou") {
-            return navigate("/movies/genre/28");
+        if(email==""){
+            return alert("Please enter an email");
         }
-        return alert("Incorrect password, please try again");
+        if(pass!= "iloveyou"){
+            return alert("Incorrect password, please try again");
+        } 
+        return navigate("/movies/genre/28");
     }
 
     return (
@@ -24,12 +27,12 @@ function LoginView() {
                 <h2>Login</h2>
                 <br></br>
                 <label>Email:</label>
-                <input type="text" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                <input type="text" value={email} onChange={(event) => setEmail(event.target.value.trim())}></input>
                 <label>Password:</label>
                 <input type="password" value={pass} onChange={(event => setPass(event.target.value))}></input>
                 <button id="enter" style={{ cursor: 'pointer' }} onClick={() => login()}>Login</button>
             </div>
-            <Footer/>
+            <Footer />
         </div>
 
     );

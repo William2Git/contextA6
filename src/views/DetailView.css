@@ -1,5 +1,5 @@
-h {
-    width:400px;
+h4 {
+    width: 400px;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -27,9 +27,9 @@ h {
     color: #fff;
 }
 
-/* Runtime (Red Color for emphasis) */
+/* Runtime */
 #detail:nth-of-type(2) {
-    color: #e50914; /* Netflix red */
+    color: #e50914;
 }
 
 /* Language */
@@ -47,7 +47,7 @@ h {
 #detail:nth-of-type(5) {
     font-size: 1.1rem;
     color: #fff;
-    width:1000px;
+    width: 900px;
 }
 
 /* Trailers Section */
@@ -62,11 +62,11 @@ h {
     color: #fff;
 }
 
-/* Trailers Grid Layout (Make icons larger, fewer per row) */
+/* Trailers Grid Layout */
 .trailers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 /* Individual Trailer Tile */
@@ -84,7 +84,7 @@ h {
     transform: scale(1.05);
 }
 
-/* Trailer Thumbnail Image (Make the thumbnails larger) */
+/* Trailer Thumbnail Image */
 .trailer-thumbnail {
     width: 100%;
     height: 100%;
@@ -97,7 +97,7 @@ h {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    font-size: 1.2rem; /* Larger text for trailer names */
+    font-size: 1.2rem;
     color: #fff;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.5);

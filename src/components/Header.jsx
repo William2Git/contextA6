@@ -5,8 +5,8 @@ function Header() {
     let navigate = useNavigate();
 
     return (
-        <div className ="navbar">
-            <h1 style={{cursor:'pointer'}} onClick ={() => navigate("/")}>WStream4U</h1>
+        <div className="navbar">
+            <h1 style={{ cursor: 'pointer' }} onClick={() => navigate("/")}>WStream4U</h1>
             <div className="left">
                 <button onClick={() => navigate("/")}>Home</button>
                 <button>About</button>
@@ -18,7 +18,7 @@ function Header() {
 
             <div>
                 <button onClick={() => navigate("/login")}>Login</button>
-                <button onClick ={() => navigate("/register")}>Signup</button>
+                <button onClick={() => navigate("/register")}>Signup</button>
             </div>
 
         </div>

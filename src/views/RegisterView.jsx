@@ -2,10 +2,10 @@ import "./RegisterView.css";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 
-function RegisterView(){
-    return(
+function RegisterView() {
+    return (
         <div>
-            <Header/>
+            <Header />
             <div id="contents">
                 <h2>Register</h2>
                 <br></br>
@@ -21,9 +21,9 @@ function RegisterView(){
                 <input type="password"></input>
                 <button id="enter" style={{ cursor: 'pointer' }}>Register</button>
             </div>
-            <Footer/>
+            <Footer />
         </div>
-        
+
     );
 }
 

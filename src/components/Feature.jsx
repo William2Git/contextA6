@@ -27,20 +27,19 @@ function Feature() {
       </div>
 
       <div className="trending">
-
         <div id="display">
           {posters.length > 0 ? (
             <div>
-              <img height ={"500px"}
+              <img height={"500px"}
                 src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5))].poster_path}`}
               />
-              <img height ={"500px"}
+              <img height={"500px"}
                 src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 5))].poster_path}`}
               />
-              <img height ={"500px"}
+              <img height={"500px"}
                 src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 10))].poster_path}`}
               />
-              <img height ={"500px"}
+              <img height={"500px"}
                 src={`https://image.tmdb.org/t/p/w500${posters[Math.floor((Math.random() * 5 + 15))].poster_path}`}
               />
             </div>
@@ -48,9 +47,7 @@ function Feature() {
             <p>Posters are loading</p>
           )}
         </div>
-
       </div>
-
     </div>
   );
 }
