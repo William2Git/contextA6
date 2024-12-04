@@ -15,7 +15,6 @@ function DetailView() {
             );
             setMovDetails(response.data);
             setProduction(response.data.production_companies);
-            console.log(response.data);
         })()
     }, []);
 
