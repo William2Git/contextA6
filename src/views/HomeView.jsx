@@ -5,14 +5,14 @@ import Feature from "../components/Feature.jsx";
 import Footer from "../components/Footer.jsx";
 
 function HomeView() {
-    return (
-        <div style={{ overflowX: "hidden" }}>
-            <Header />
-            <Hero />
-            <Feature />
-            <Footer />
-        </div>
-    );
+  return (
+    <div style={{ overflowX: "hidden" }}>
+      <Header />
+      <Hero />
+      <Feature />
+      <Footer />
+    </div>
+  );
 }
 
 export default HomeView;
