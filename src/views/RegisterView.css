@@ -5,8 +5,8 @@ body {
 
 .register-form {
     display: flex;
-    width:1000px;
-    margin:auto;
+    width: 1000px;
+    margin: auto;
 }
 
 .register-form #contents {
@@ -16,16 +16,17 @@ body {
     padding: 30px;
     border-radius: 10px;
     width: 300px;
-    height:600px;
+    height: 600px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     margin-top: 30px;
 }
 
-#contents h2, .genres-checklist h2   {
+#contents h2,
+.genres-checklist h2 {
     color: rgb(194, 39, 39);
     text-align: center;
-    font-size:25px;
+    font-size: 25px;
 }
 
 #contents label {
@@ -37,7 +38,7 @@ body {
     text-align: left;
 }
 
-#contents input{
+#contents input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -79,7 +80,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     width: 300px;
-    height:600px;
+    height: 600px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     margin-top: 30px;
@@ -93,10 +94,19 @@ body {
     font-weight: bold;
 }
 
-.genre-name{
+.genre-name {
     width: 100%;
     padding: 12px;
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+
+.genres-checklist input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.genres-checklist label.genre-name {
+    font-size: 20px;
+    /* Optional: increase label font size for better readability */
 }
