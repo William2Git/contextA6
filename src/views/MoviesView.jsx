@@ -1,10 +1,10 @@
 import "./MoviesView.css";
-import { Outlet, useNavigate } from "react-router";
+import { Outlet } from "react-router";
 import Genres from "../components/Genres.jsx";
 import Footer from "../components/Footer.jsx";
+import Header from "../components/Header.jsx";
 
 function MoviesView() {
-  const navigate = useNavigate();
   const genres = [
     { id: 28, genre: 'Action' },
     { id: 12, genre: 'Adventure' },
@@ -20,22 +20,7 @@ function MoviesView() {
 
   return (
     <div>
-      <div className="navbar">
-        <h1 style={{ cursor: 'pointer' }} onClick={() => navigate("/")}>WStream4U</h1>
-        <div className="left">
-          <button onClick={() => navigate("/")}>Home</button>
-          <button>About</button>
-          <button>TV Shows</button>
-          <button>Movies</button>
-          <button>Popular</button>
-          <button>My Watchlist</button>
-        </div>
-
-        <div id="profile">
-          <button>User Profile</button>
-          <button onClick={() => navigate("/login")}>Logout</button>
-        </div>
-      </div>
+      <Header />
       <br></br>
       <div className="middle">
         <Genres genresList={genres} />

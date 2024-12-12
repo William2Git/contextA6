@@ -2,11 +2,22 @@ import "./DetailView.css";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { useStoreContext } from "../context";
 
 function DetailView() {
   const [movDetails, setMovDetails] = useState([]);
   const [production, setProduction] = useState([]);
+  const { cart, setCart } = useStoreContext();
+  const [buyText, setBuyText] = useState("Buy");
   const params = useParams();
+
+  useEffect(()=> {
+    if(cart.has(params.id)){
+      setBuyText("Added");
+    }else{
+      setBuyText("Buy");
+    }
+  }, [params.id, cart]);
 
   useEffect(() => {
     (async function getGenre() {
@@ -55,9 +66,15 @@ function DetailView() {
     ));
   }
 
+  function setButtonText(){
+    setCart((prevCart) => prevCart.set(params.id, { title: movDetails.original_title, url: movDetails.poster_path }));
+    setBuyText("Added");
+  }
+
   return (
     <div>
       <h4>{movDetails.original_title}</h4>
+      <button onClick={() => setButtonText()} className="buy-button">{buyText}</button>
       <p id="detail">Release Date: {movDetails.release_date}</p>
       <p id="detail">Runtime: {movDetails.runtime} mins</p>
       <p id="detail">Language: {movDetails.original_language}</p>

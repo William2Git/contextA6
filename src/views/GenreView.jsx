@@ -3,10 +3,12 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 
+
 function GenreView() {
   let [page, setPage] = useState(1);
   let [posters, setPosters] = useState([]);
   let [maxPage, setMaxPage] = useState(0);
+
   const params = useParams();
   const navigate = useNavigate();
 
@@ -30,6 +32,7 @@ function GenreView() {
       );
       setPosters(response.data.results);
       setMaxPage(response.data.total_pages);
+      console.log(response.data.results);
     })()
   }, [params.id]);
 
