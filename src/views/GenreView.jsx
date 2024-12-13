@@ -64,10 +64,8 @@ function GenreView() {
     }
   }
 
-  function setButtonText(id) {
-    console.log(id);
-    console.log(movDetails);
-    setCart((prevCart) => prevCart.set(id, { title: movDetails.original_title, url: movDetails.poster_path }));
+  function setButtonText(movie) {
+    setCart((prevCart) => prevCart.set(movie.id, { title: movie.original_title, url: movie.poster_path }));
     setBuyText("Added");
   }
 
@@ -75,12 +73,14 @@ function GenreView() {
     <div className="poster-section">
       {posters.length > 0 ? (
         posters.map((mov) => (
-          <div key={mov.id}>
-            <img className="poster-image"  height={"300px"} style={{ cursor: "pointer" }}
-              onClick={() => navigate(`/movies/details/${mov.id}`)}
-              src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`}
-              alt={mov.title} />
-            <button onClick={() => setButtonText(mov.id)} className="buy-button">{buyText}</button>
+          <div>
+            <div key={mov.id}>
+              <img className="poster-image" height={"300px"} style={{ cursor: "pointer" }}
+                onClick={() => navigate(`/movies/details/${mov.id}`)}
+                src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`}
+                alt={mov.title} />
+            </div>
+            <button onClick={() => setButtonText(mov)} className="buy-button">{buyText}</button>
           </div>
         ))
 
