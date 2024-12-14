@@ -10,7 +10,7 @@ function CartView() {
     <div>
       <Header />
       <div className="cart-view">
-        <h1>Shopping Cart</h1>
+        <h1>Cart</h1>
         <div className="cart-items">
           {
             cart.entrySeq().map(([key, value]) => {

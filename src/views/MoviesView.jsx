@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import Genres from "../components/Genres.jsx";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
+import { useStoreContext } from "../context";
 
 function MoviesView() {
   const genres = [
@@ -17,6 +18,12 @@ function MoviesView() {
     { id: 10402, genre: 'Music' },
     { id: 878, genre: 'Science Fiction' },
   ];
+  const list = [];
+
+  const {choices} = useStoreContext();
+
+  console.log();
+  console.log(genres[0]);
 
   return (
     <div>

@@ -28,18 +28,17 @@ function RegisterView() {
 
   function register(event) {
     event.preventDefault();
-    setFirstName(firstName.current.value);
-    setLastName(lastName.current.value);
-    setEmail(email.current.value);
-    setPassword(password.current.value);
-    setLoggedIn(true);
 
-    console.log(Object.values(choices).includes(true));
-    if(!Object.values(choices).includes(true)){
+    if (!Object.values(choices).includes(true)) {
       return alert("Please select at least one preferred genre");
     }
     if (password.current.value == checkPassword) {
       alert("Account Successfully Created")
+      setFirstName(firstName.current.value);
+      setLastName(lastName.current.value);
+      setEmail(email.current.value);
+      setPassword(password.current.value);
+      setLoggedIn(true);
       return navigate("/movies/genre/28");
     }
 
@@ -76,7 +75,7 @@ function RegisterView() {
                 checked={choices[item]}
                 onChange={() => selectGenre(item)}
                 id={`checkbox-${i}`}
-                style={{cursor:'pointer'}}
+                style={{ cursor: 'pointer' }}
               />
               <label className="genre-name">{item}</label>
             </div>
