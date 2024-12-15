@@ -60,8 +60,8 @@ function GenreView() {
                 src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`}
                 alt={mov.title} />
             </div>
-            <button onClick={() => setCart((prevCart) => prevCart.set(mov.id+"", { title: mov.original_title, url: mov.poster_path }))}
-              className="buy-button">{cart.has(mov.id+"") ? "Added" : "Buy"}</button>
+            <button onClick={() => setCart((prevCart) => prevCart.set(mov.id + "", { title: mov.original_title, url: mov.poster_path }))}
+              className="buy-button">{cart.has(mov.id + "") ? "Added" : "Buy"}</button>
           </div>
         ))
 

@@ -4,16 +4,16 @@ import { useStoreContext } from "../context";
 
 function Header() {
   let navigate = useNavigate();
-  const { loggedIn, setLoggedIn, firstName } = useStoreContext();
+  const { loggedIn, setLoggedIn, firstName, defaultGenre } = useStoreContext();
 
   function logout() {
     setLoggedIn(false);
     navigate("/login");
   }
 
-  function movies(){
-    if(loggedIn){
-      return navigate("/movies/genre/28");
+  function movies() {
+    if (loggedIn) {
+      return navigate(`/movies/genre/${defaultGenre}`);
     }
     return alert("Please log in before viewing available movies");
   }
@@ -47,10 +47,10 @@ function Header() {
       </div >
       {loggedIn ? (
         <h1>Welcome to WStream4U, {firstName}!</h1>
-      ):(
+      ) : (
         <></>
       )}
-      
+
     </div>
   );
 }

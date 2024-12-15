@@ -1,4 +1,5 @@
-.profile, .checklist {
+.profile,
+.checklist {
     background-color: #141414;
     /* Dark background color similar to Netflix */
     color: white;
@@ -53,21 +54,24 @@
     color: #e50914;
 }
 
-.names, .profile {
+.names,
+.profile {
     display: flex;
     flex-direction: column;
     /* Stack labels and inputs */
     gap: 15px;
 }
 
-.names label, .profile label {
+.names label,
+.profile label {
     font-size: 16px;
     font-weight: bold;
     color: #bbb;
     /* Lighter text for labels */
 }
 
-.names input, .profile input {
+.names input,
+.profile input {
     padding: 12px;
     font-size: 16px;
     border-radius: 5px;
@@ -79,17 +83,20 @@
     transition: border 0.3s ease;
 }
 
-.names input:focus, .profile input:focus {
+.names input:focus,
+.profile input:focus {
     border-color: #e50914;
     /* Highlight border on focus */
     outline: none;
 }
 
-.names button {
+.names button,
+.checklist button {
     background-color: #e50914;
     color: white;
     font-size: 16px;
-    width:300px;
+    width: 300px;
+    height: 50px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -98,12 +105,14 @@
     font-weight: bold;
 }
 
-.names button:hover {
+.names button:hover,
+.checklist button {
     background-color: #b20710;
     /* Darker red when hovered */
 }
 
-.names button:focus {
+.names button:focus,
+.checklist button:focus {
     outline: none;
 }
 
@@ -118,7 +127,7 @@
     /* No hover effect on readonly input */
 }
 
-.settings{
+.settings {
     display: flex;
     width: 1000px;
     margin: auto;

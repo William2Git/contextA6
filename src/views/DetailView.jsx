@@ -60,8 +60,8 @@ function DetailView() {
   return (
     <div>
       <h4>{movDetails.original_title}</h4>
-      <button onClick={() => setCart((prevCart) => prevCart.set(params.id+"", { title: movDetails.original_title, url: movDetails.poster_path }))}
-        className="buy-button">{cart.has(params.id+"") ? "Added" : "Buy"}</button>
+      <button onClick={() => setCart((prevCart) => prevCart.set(params.id + "", { title: movDetails.original_title, url: movDetails.poster_path }))}
+        className="buy-button">{cart.has(params.id + "") ? "Added" : "Buy"}</button>
       <p id="detail">Release Date: {movDetails.release_date}</p>
       <p id="detail">Runtime: {movDetails.runtime} mins</p>
       <p id="detail">Language: {movDetails.original_language}</p>

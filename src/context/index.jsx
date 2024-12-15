@@ -10,30 +10,13 @@ export const StoreProvider = ({ children }) => {
     const [password, setPassword] = useState("");
     const [cart, setCart] = useState(Map());
     const [loggedIn, setLoggedIn] = useState(false);
-    const [choices, setChoices] = useState({
-        Action: false,
-        Adventure: false,
-        Animation: false,
-        Comedy: false,
-        Crime: false,
-        Family: false,
-        Fantasy: false,
-        Horror: false,
-        Music: false,
-        ScienceFiction: false,
-    });
-
-    const selectGenre = (genre) => {
-        setChoices((prev) => ({
-            ...prev,
-            [genre]: !prev[genre],
-        }));
-    };
+    const [choices, setChoices] = useState([]);
+    const [defaultGenre, setDefaultGenre] = useState(28);
 
     return (
         <StoreContext.Provider value={{
             firstName, setFirstName, lastName, setLastName, email, setEmail,
-            password, setPassword, cart, setCart, choices, setChoices, selectGenre, loggedIn, setLoggedIn
+            password, setPassword, cart, setCart, choices, setChoices, loggedIn, setLoggedIn, defaultGenre, setDefaultGenre
         }}>
             {children}
         </StoreContext.Provider>

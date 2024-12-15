@@ -9,15 +9,15 @@ import { useStoreContext } from "../context";
 function LoginView() {
   let [user, setUser] = useState("");
   let [pass, setPass] = useState("");
-  const {email, password, setLoggedIn} = useStoreContext();
+  const { email, password, setLoggedIn } = useStoreContext();
   const navigate = useNavigate();
 
   function login(event) {
     event.preventDefault();
-    if (user=="") {
+    if (user == "") {
       return alert("Please enter an email");
     }
-    if (user != email || pass != password ) {
+    if (user != email || pass != password) {
       return alert("Incorrect login credentials, please try again");
     }
     setLoggedIn(true);
@@ -27,7 +27,7 @@ function LoginView() {
   return (
     <div>
       <Header />
-      <form id="contents" onSubmit={(event)=>{login(event)}}>
+      <form id="contents" onSubmit={(event) => { login(event) }}>
         <h2>Login</h2>
         <br></br>
         <label>Email:</label>
